@@ -55,6 +55,11 @@
 			   <li><a href='#'><span>Gallery</span></a></li>
 			   <li><a href='single.html'><span>About</span></a></li>
 			   <li class='last'><a href='contact.html'><span>Contact</span></a></li>
+				@if(Session::has('user_info'))
+					<li class='last'><a href='contact.html'><span>{{ Session::get('user_info.name') }}</span></a></li>
+				@else
+					<li class='last'><a href='contact.html'><span>登陆</span></a></li>
+				@endif
 			</ul>
 		</div>
 	</div>
